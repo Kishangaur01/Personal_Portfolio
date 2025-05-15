@@ -1,3 +1,100 @@
+// import { useRef, useState } from "react";
+// import emailjs from "@emailjs/browser";
+
+// const Contact = () => {
+//   const form = useRef();
+//   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+//   const [status, setStatus] = useState("");
+
+//   const handleChange = (e) => {
+//     setFormData((prev) => ({
+//       ...prev,
+//       [e.target.name]: e.target.value,
+//     }));
+//   };
+
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+
+//     if (!formData.name || !formData.email || !formData.message) {
+//       setStatus("Please fill in all fields.");
+//       return;
+//     }
+
+//     emailjs
+//       .sendForm("service_j9m4rpj", "template_hkpmhyj", form.current, "T0fGjnOMp1-iJ_53X")
+//       .then(
+//         (result) => {
+//           console.log("SUCCESS!", result.text);
+//           setStatus("Message sent successfully!");
+//           setFormData({ name: "", email: "", message: "" });
+//         },
+//         (error) => {
+//           console.error("FAILED...", error);
+//           setStatus("Failed to send message. Please try again later.");
+//         }
+//       );
+//   };
+
+//   return (
+//     <section id="contact" className="py-20 px-6  text-white">
+//       <div className="max-w-3xl mx-auto bg-white text-black rounded-lg shadow-lg p-8">
+//         <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
+
+//         <form ref={form} onSubmit={sendEmail} className="space-y-6">
+//           <div>
+//             <label className="block mb-1 font-medium">Name</label>
+//             <input
+//               type="text"
+//               name="name"
+//               className="w-full border border-gray-300 rounded px-4 py-2"
+//               value={formData.name}
+//               onChange={handleChange}
+//               required
+//             />
+//           </div>
+
+//           <div>
+//             <label className="block mb-1 font-medium">Email</label>
+//             <input
+//               type="email"
+//               name="email"
+//               className="w-full border border-gray-300 rounded px-4 py-2"
+//               value={formData.email}
+//               onChange={handleChange}
+//               required
+//             />
+//           </div>
+
+//           <div>
+//             <label className="block mb-1 font-medium">Message</label>
+//             <textarea
+//               name="message"
+//               rows="5"
+//               className="w-full border border-gray-300 rounded px-4 py-2"
+//               value={formData.message}
+//               onChange={handleChange}
+//               required
+//             ></textarea>
+//           </div>
+
+//           <button
+//             type="submit"
+//             className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded transition"
+//           >
+//             Send Message
+//           </button>
+
+//           {status && <p className="mt-4 text-sm text-red-600">{status}</p>}
+//         </form>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Contact;
+
+
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Dialog } from "@headlessui/react";
@@ -36,14 +133,14 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center  px-4 py-20"
+      className="min-h-screen flex items-center justify-center px-4 py-20"
     >
-      <div className="w-full max-w-3xl bg-white rounded-2xl shadow-xl p-8 md:p-12">
+      <div className="w-full max-w-3xl bg-white text-black rounded-2xl shadow-xl p-8 md:p-12">
         <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-6">
           Let's Connect
         </h2>
         <p className="text-center text-gray-500 mb-10">
-          Feel free to reach out!.
+          Feel free to reach out! I usually respond within 24 hours.
         </p>
 
         <form ref={form} onSubmit={sendEmail} className="space-y-6">
