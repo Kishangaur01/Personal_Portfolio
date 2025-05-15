@@ -43,7 +43,7 @@ const About = () => {
       {/* Left Circuit Image */}
       <div className="flex-1 flex justify-center">
         <img
-          src="\public\images\Tech_2.jpg"
+          src="\images\Tech_2.jpg"
           alt="Circuit"
           className="w-full max-w-[400px] sm:max-w-[650px] h-auto object-contain"
         />
