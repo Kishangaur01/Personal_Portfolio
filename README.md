@@ -15,13 +15,13 @@ A modern, responsive portfolio built with **React.js** to showcase my skills, pr
 - **Dark/Light Mode** toggle  
 - **Smooth Animations** (Framer Motion/GSAP)  
 - **Dynamic Project Showcase** with GitHub links  
-- **Contact Form** (EmailJS or Netlify Forms)  
+- **Contact Form** (EmailJS)  
 
 ## 🛠 Tech Stack  
 - **Frontend:** React.js, React Router  
-- **Styling:** CSS Modules / TailwindCSS  
+- **Styling:** TailwindCSS
 - **Animation:** Framer Motion  
-- **Deployment:** Vercel / Netlify  
+- **Deployment:** Vercel
 
 ---
 
